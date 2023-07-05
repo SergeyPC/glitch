@@ -80,5 +80,18 @@ app.get('/deals/:id', async (req, res) => {
     }
 });
 
+app.get('/deals/:id', async (req, res) => {
+    const randomBoolean = Math.random() >= 0.5;
+    const outcome = randomBoolean === true ? 'won' : 'lost';
+
+    try {
+        await api.updateDeal(req.params.id, outcome, req.user[0].access_token);
+
+        res.render('outcome', { outcome });
+    } catch (error) {
+        return res.send(error.message);
+    }
+});
+
 // End of `Step 2`
 app.listen(port, () => console.log(`🟢 App has started. \n🔗 Live URL: https://${process.env.PROJECT_DOMAIN}.glitch.me`));
