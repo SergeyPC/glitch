@@ -115,7 +115,9 @@ app.get('/T-form', async (req, res) => {
     }
 });*/
 
-app.get('/T-form', 'fgd')
+app.get('/T-form', function(req, res) {
+  return "dg"
+})
 
 // End of `Step 2`
 app.listen(port, () => console.log(`🟢 App has started. \n🔗 Live URL: https://${process.env.PROJECT_DOMAIN}.glitch.me`));
