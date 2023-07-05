@@ -115,13 +115,8 @@ app.get('/T-form', async (req, res) => {
     }
 });*/
 
-app.get('/T-form', (req, res) => {
-        let response = {
-          "data": [{
-            "company": "Sigma Software"
-          }]
-        }
-         return response;
+app.get('/T-form', async (req, res) => {
+        res.render('data', '{ \"company\": \"Sigma Software\"}')
       })
 
 // End of `Step 2`
