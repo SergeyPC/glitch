@@ -66,6 +66,7 @@ app.get('/', async (req, res) => {
         return res.send(error.message);
     }
 });
+
 app.get('/deals/:id', async (req, res) => {
     const randomBoolean = Math.random() >= 0.5;
     const outcome = randomBoolean === true ? 'won' : 'lost';
