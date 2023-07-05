@@ -81,18 +81,13 @@ app.get('/deals/:id', async (req, res) => {
 });
 
 app.get('/T-form', async (req, res) => {
-    const randomBoolean = Math.random() >= 0.5;
-    const outcome = randomBoolean === true ? 'won' : 'lost';
-
     try {
-      let answer = {
-          "company": {
+      res.render({
+          "note": {
             "markdown": true,
             "value": "Sigma Software"
           }
-      }
-        
-      return answer;
+      });
 
     } catch (error) {
         return res.send(error.message);
