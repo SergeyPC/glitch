@@ -104,19 +104,15 @@ app.get('/T-form', async (req, res) => {
     } catch (error) {
         return res.send(error.message);
     }*/
-  try {
-      let resp =   {
-        "company": {
-          "markdown": true,
-          "value": "Meeting next week to sign the [insurance contract](pipedrive.com).\n\n&nbsp;\n\n **Agenda**\n1. Agree on contract details\n\n **Links**\n - [Insurance company](https://www.pipedrive.com/en/features)"
-        }};
-      
-      return res.send(resp);
 
+    try {
+      res.render('data', [{
+        "company":'Sigma Software'
+      }
+      ])
     } catch (error) {
         return res.send(error.message);
     }
-  
 });
 
 // End of `Step 2`
