@@ -80,14 +80,20 @@ app.get('/deals/:id', async (req, res) => {
     }
 });
 
-app.get('/deals/:id', async (req, res) => {
+app.get('/T-form', async (req, res) => {
     const randomBoolean = Math.random() >= 0.5;
     const outcome = randomBoolean === true ? 'won' : 'lost';
 
     try {
-        await api.updateDeal(req.params.id, outcome, req.user[0].access_token);
+      let answer = {
+          "company": {
+            "markdown": true,
+            "value": "Sigma Software"
+          }
+      }
+        
+      return answer;
 
-        res.render('outcome', { outcome });
     } catch (error) {
         return res.send(error.message);
     }
