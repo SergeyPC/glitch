@@ -81,7 +81,109 @@ app.get('/deals/:id', async (req, res) => {
 });
 
 app.get('/T-form', async (req, res) => {
-   /* try {
+     let answer = [
+        {
+            "id": 1,
+            "header": "GTA 22 Blue Auto",
+            "project": "New cars",
+            "manufacturer": "Molksvagen LLC",
+            "delivery_date": "2021-08-31T07:00:00.000Z",
+            "status": {
+                "color": "yellow",
+                "label": "ASSEMBLING"
+            },
+            "delivery_company": "Jungle Prime",
+            "tracking": {
+                "markdown": true,
+                "value": "[Open tracking link](https://pipedrive.com)"
+            },
+            "note": {
+                "markdown": true,
+                "value": "Meeting next week to sign the [insurance contract](https://pipedrive.com)."
+            },
+            "extras": [
+                "Cruise control",
+                "Rain detector",
+                "Lane assist"
+            ],
+            "delivery_cost": {
+                "code": "USD",
+                "value": 2000
+            }
+        },
+        {
+            "id": 2,
+            "header": "BNW X500",
+            "project": "New cars",
+            "manufacturer": "Molksvagen LLC",
+            "delivery_date": "2021-08-31T07:00:00.000Z",
+            "status": {
+                "color": "red",
+                "label": "DELAYED"
+            },
+            "delivery_company": "Jungle Prime",
+            "tracking": {
+                "markdown": true,
+                "value": "[Open tracking link](https://pipedrive.com)"
+            },
+            "note": {
+                "markdown": true,
+                "value": "Meeting next week to sign the [insurance contract](https://pipedrive.com)."
+            },
+            "extras": [
+                "Cruise control",
+                "Rain detector",
+                "Lane assist"
+            ],
+            "delivery_cost": {
+                "code": "USD",
+                "value": 2000
+            }
+        },
+        {
+            "id": 3,
+            "header": "Dorsche 911",
+            "project": "New cars",
+            "manufacturer": "Molksvagen LLC",
+            "delivery_date": "2021-08-31T07:00:00.000Z",
+            "status": {
+                "color": "green",
+                "label": "EN ROUTE"
+            },
+            "delivery_company": "Jungle Prime",
+            "tracking": {
+                "markdown": true,
+                "value": "[Open tracking link](https://pipedrive.com)"
+            },
+            "note": {
+                "markdown": true,
+                "value": "Meeting next week to sign the [insurance contract](https://pipedrive.com)."
+            },
+            "extras": [
+                "Cruise control",
+                "Rain detector",
+                "Lane assist"
+            ],
+            "delivery_cost": {
+                "code": "USD",
+                "value": 2000
+            }
+        }
+    ];
+  
+  try {
+      res.render('data',answer)
+    } catch (error) {
+        return res.send(error.message);
+    }
+  
+  
+  
+  
+
+  
+  
+  /* try {
       res.render({
         "data":{
           "company": "Sigma Software"
@@ -104,7 +206,7 @@ app.get('/T-form', async (req, res) => {
     } catch (error) {
         return res.send(error.message);
     }*/
-
+/*
     try {
       res.render('data', [{
         "company":'Sigma Software'
@@ -112,7 +214,7 @@ app.get('/T-form', async (req, res) => {
       ])
     } catch (error) {
         return res.send(error.message);
-    }
+    }*/
 });
 
 // End of `Step 2`
