@@ -81,17 +81,29 @@ app.get('/deals/:id', async (req, res) => {
 });
 
 app.get('/T-form', async (req, res) => {
-    try {
+   /* try {
       res.render({
-          "note": {
-            "markdown": true,
-            "value": "Sigma Software"
-          }
+        "data":{
+          "company": "Sigma Software"
+        }
       });
 
     } catch (error) {
         return res.send(error.message);
+    }*/
+    try {
+      let resp = {
+        "data":{
+          "company": "Sigma Software"
+        }
+      };
+      
+      return 
+
+    } catch (error) {
+        return res.send(error.message);
     }
+  
 });
 
 // End of `Step 2`
