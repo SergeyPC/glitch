@@ -121,3 +121,8 @@ app.get('/T-form', async function(req, res) {
 
 // End of `Step 2`
 app.listen(port, () => console.log(`🟢 App has started. \n🔗 Live URL: https://${process.env.PROJECT_DOMAIN}.glitch.me`));
+
+module.exports = (data) => {
+	data.result = "ok";
+	return data
+}
