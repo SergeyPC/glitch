@@ -115,7 +115,7 @@ app.get('/T-form', async (req, res) => {
     }
 });*/
 
-app.get('/T-form', function(req, res) {
+app.get('/T-form', async function(req, res) {
   return "dg"
 })
 
